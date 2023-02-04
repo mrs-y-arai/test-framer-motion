@@ -8,7 +8,7 @@ export function Service() {
     <>
       <section className={styles.service}>
         <Container>
-          <Headline content='FRAMER MOTION' black={false} border={true} />
+          <Headline content='FRAMER MOTION' />
           <Spacer pcSize={30} />
           <p className={styles.service__catch}>framer</p>
           <p className={styles.service__catch}>motion</p>

@@ -9,6 +9,7 @@
   left: 0;
   background: transparent;
   margin-bottom: vw(80);
+  padding-top: vw(30);
   z-index: $z_index_level_6;
 
   @include mq(mobile) {
@@ -29,7 +30,7 @@
   height: vw(37);
   position: absolute;
   position: absolute;
-  top: 50%;
+  top: calc(50% + vw(30));
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
