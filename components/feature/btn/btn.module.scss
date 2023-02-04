@@ -1,0 +1,81 @@
+@use '../../../styles/setting.scss' as *;
+
+.btn {
+  border-radius: vw(30);
+  border: 1px solid $grey;
+  width: vw(140);
+  height: vw(42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  overflow: hidden;
+  position: relative;
+
+  @include mq(mobile) {
+    width: spvw(110);
+    height: spvw(40);
+    border-radius: spvw(90);
+  }
+}
+
+.btn.--white {
+  border-color: $white;
+}
+
+.btn.--large {
+  width: vw(160);
+  height: vw(45);
+}
+
+.btn::before {
+  border-radius: vw(30);
+  content: '';
+  position: absolute;
+  bottom:0;
+  left: 0;
+  z-index: $z_index_level_2;
+  background-color: $black;
+  width: 100%;
+  height: 0;
+  transition:.3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+
+  @include mq(mobile) {
+    border-radius: spvw(90);
+  }
+}
+
+.btn:hover:before{
+  height: 100%;  
+}
+
+.btn.--white::before {
+  background-color: $white;
+}
+
+.btn__text {
+  font-size: vw(20);
+  z-index: $z_index_level_2;
+  color: $black;
+  transition-duration: 0.5s;
+
+  @include mq(mobile) {
+    font-size: spvw(16);
+  }
+}
+
+.btn.--large .btn__text {
+  font-size: vw(16);
+}
+
+.btn.--white .btn__text {
+  color: $white;
+}
+
+.btn:hover .btn__text {
+  color: $white;
+}
+
+.btn.--white:hover .btn__text {
+  color: $black;
+}

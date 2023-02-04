@@ -1,0 +1,12 @@
+@use '../../../../styles/setting.scss' as *;
+
+.service__catch {
+  font-size: vw(250);
+  line-height: vw(230);
+  margin-bottom: vw(30);
+
+  @include mq(mobile) {
+    font-size: spvw(70);
+    line-height: spvw(70);
+  }
+}

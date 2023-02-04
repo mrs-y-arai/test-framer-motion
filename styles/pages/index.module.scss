@@ -1,0 +1,24 @@
+@use '../setting.scss' as *;
+
+.fv {
+  width: 100vw;
+  height: 300vh;
+  padding: 30px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: $white;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.box:nth-of-type(4) {
+  margin-top: 400px;
+}
+
+.box:nth-of-type(5) {
+  margin-right: 0;
+  margin-left: auto;
+}

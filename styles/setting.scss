@@ -1,0 +1,63 @@
+@use "sass:math";
+
+////////////////////
+// 色タグ
+////////////////////
+$black: #000000;
+$smoke: #F2F2EF;
+$grey: #707070;
+$white: #FFFFFF;
+$yellow: #FFF641;
+$green: #2BEA39;
+$pink: #FF00F5;
+$red: #FF0000;
+$sky: #2BEAE3;
+$blue: #3139FF;
+
+////////////////////
+// z-index
+////////////////////
+// z-indexを使う場合、基本level1を使う。
+// 2段階に分ける必要がある場合、level2を使う。
+// それ以上必要な場合はlevel3以上を使う。
+$z_index_level_minus_6: -600;
+$z_index_level_minus_5: -500;
+$z_index_level_minus_4: -400;
+$z_index_level_minus_3: -300;
+$z_index_level_minus_2: -200;
+$z_index_level_minus_1: -100;
+$z_index_level_1: 100;
+$z_index_level_2: 200;
+$z_index_level_3: 300;
+$z_index_level_4: 400;
+$z_index_level_5: 500;
+$z_index_level_6: 600;
+$z_index_level_7: 700;
+$z_index_level_8: 800;
+
+////////////////////
+// レスポンシブ
+////////////////////
+// ブレイクポイント
+$breakpoints: (
+  mobile: 'screen and (min-width: 340px) and (max-width: 767px)',
+  tablet: 'screen and (min-width: 768px) and (max-width: 1023px) ',
+  pc: 'screen and (min-width: 1024px) '
+);
+
+@mixin mq($bp) {
+  @media #{map-get($breakpoints, $bp)} {
+   @content;
+  }
+}
+
+// vw計算関数
+@function vw($px) {
+  $px: math.div($px, 1600) * 100;
+  @return $px + vw;
+}
+
+@function spvw($px) {
+  $px: math.div($px, 375) * 100;
+  @return $px + vw;
+}

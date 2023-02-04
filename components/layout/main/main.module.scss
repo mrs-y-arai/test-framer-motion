@@ -1,0 +1,10 @@
+@use '../../../styles/setting.scss' as *;
+
+.main {
+  width: 100%;
+  padding-top: vw(130);
+
+  @include mq(mobile) {
+    padding-top: spvw(110);
+  }
+}

@@ -1,0 +1,19 @@
+@use '../../../styles/setting.scss' as *;
+
+.headline {
+  font-size: vw(20);
+  display: block;
+  width: vw(305);
+  padding-bottom: vw(6);
+  border-bottom: 1px solid $white;
+
+  @include mq(mobile) {
+    font-size: spvw(16);
+    width: spvw(120);
+    padding-bottom: spvw(4);    
+  }
+}
+
+.headline.--border-none {
+  border: none;
+}
