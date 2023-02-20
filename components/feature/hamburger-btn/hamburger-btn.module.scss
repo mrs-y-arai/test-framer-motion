@@ -1,0 +1,33 @@
+@use '../../../styles/setting.scss' as *;
+
+.hamburger-btn {
+  width: vw(40);
+  height: vw(50);
+  position: relative;
+  margin-bottom: vw810;
+}
+
+.hamburger-btn .hamburger-btn__line {
+  display: block;
+  width: 100%;
+  height: vw(2);
+  background-color: $black;
+  margin-top: vw(10);
+  transition-duration: 0.5s;
+  transform: translate( 0%, 0% )
+}
+
+.hamburger-btn[aria-expanded="true"] .hamburger-btn__line:first-of-type {
+  transform: translate( 0%, 100% ) rotate(30deg);
+}
+
+.hamburger-btn[aria-expanded="true"] .hamburger-btn__line:nth-of-type(2) {
+  transform: translate( 0%, -490% ) rotate(-30deg);
+}
+
+.hamburger-btn__text {
+  font-size: vw(12);
+  text-align: center;
+  color: $black;
+  margin-top: vw(5);
+}

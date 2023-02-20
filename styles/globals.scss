@@ -1,4 +1,8 @@
 @use './setting.scss' as *;
+// パララックスのところに指定したい。。
+html {
+  // scroll-snap-type: y mandatory;
+}
 
 html,
 body {

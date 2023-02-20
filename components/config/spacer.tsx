@@ -8,7 +8,6 @@ interface Props {
 
 export function Spacer(props: Props) {
   const width = useWindowSize()
-  console.log(width)
   let size = 0
 
   if( width < 768 ) {

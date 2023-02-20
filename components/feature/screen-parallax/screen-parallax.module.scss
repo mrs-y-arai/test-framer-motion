@@ -1,0 +1,44 @@
+@use '../../../styles/setting.scss' as *;
+
+.parallax-wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  position: relative;
+  scroll-snap-align: center;
+  perspective: 500px;
+  overflow-y: scroll;
+  background-color: $green;
+}
+
+.parallax-wrap__screen {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  max-height: 90vh;
+  margin: 20px;
+  overflow: hidden;
+  background-color: $grey;
+}
+
+.parallax-wrap__headline {
+  margin: 0;
+  color: $white;
+  left: calc(50% + 130px);
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1.2;
+  position: absolute;
+}
+
+.progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: $grey;
+  bottom: 100px;
+}

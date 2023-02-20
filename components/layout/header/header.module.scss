@@ -6,15 +6,31 @@
   align-items: center;
   position: fixed;
   top: 0;
-  left: 0;
-  background: transparent;
+  left: 0;  
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
   margin-bottom: vw(80);
-  padding-top: vw(30);
   z-index: $z_index_level_6;
 
   @include mq(mobile) {
     display: none;
   }
+}
+
+.header[aria-hidden="true"] {
+  top: vw(-230);
+}
+
+.header[aria-hidden="false"] {
+  top: vw(0);
+}
+
+.header[aria-expanded="true"] {
+  background-color: #fff;
+}
+
+.header[aria-expanded="false"] {
+  background-color: transparent;
 }
 
 .header__inner {
@@ -26,11 +42,11 @@
 }
 
 .logo {
-  width: vw(180); 
-  height: vw(37);
+  width: vw(200);
+  height: auto;
   position: absolute;
   position: absolute;
-  top: calc(50% + vw(30));
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);

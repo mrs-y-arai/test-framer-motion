@@ -1,0 +1,17 @@
+@use '../../../styles/setting.scss' as *;
+
+.animate-block__blue-bg-wrap {
+  width: fit-content;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.animate-block__blue-bg {
+  width: 100%;
+  height: 100%;
+  background-color: $blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

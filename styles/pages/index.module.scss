@@ -16,8 +16,8 @@
   align-items: center;
 }
 
-.animate-block.--black {
-  background-color: $black;
+.animate-block.--grey {
+  background-color: $grey;
 }
 
 .circle {
@@ -61,6 +61,12 @@
   margin-left: auto;
 }
 
+.animate-block__catch-block {
+  overflow: hidden;
+  margin-left: vw(150);
+  height: vw(200);
+}
+
 .animate-block__catch {
   font-size: vw(200);
   line-height: vw(200);
@@ -77,18 +83,42 @@
   }
 }
 
-.animate-block__blue-bg-wrap {
-  width: vw(500);
-  height: vw(50);
+.animate-block:nth-of-type(7) {
+  width: 100%;
+  height: vw(500);
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: scroll;
   overflow-x: hidden;
-  position: relative;
+  position: relative;  
 }
 
-.animate-block__blue-bg {
-  width: vw(500);
-  height: vw(50);
-  background-color: $blue;
-  position: absolute;
-  top: 0;
+.animate-block:nth-of-type(7) .animate-block__bar {
+  position: sticky;
+  top: vw(-70);
   left: 0;
+  width: 100vw;
+  height: vw(30);
+  transform-origin: 0%;
+  background-color: $yellow;
+  margin-left: vw(-70);
+  z-index: $z_index_level_1;
+}
+
+.animate-block:nth-of-type(7) .rect:nth-of-type(odd) {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.animate-block:nth-of-type(7) .rect {
+  width: vw(200);
+  height: vw(200);
+}
+
+.parallax {
+  width: 100%;
+  height: auto;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  position: relative;
 }
